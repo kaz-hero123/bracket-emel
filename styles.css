@@ -10,12 +10,20 @@ body {
   background-color: #141414;
   color: #f4f4f4;
 }
-
 header {
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 1.5em; /* Pastikan font-size kecil untuk layar kecil */
+  padding: 5px 10px; /* Kurangi padding untuk layar kecil */
+  white-space: nowrap; /* Agar teks tidak membungkus ke bawah */
 }
 
 h1 {
@@ -101,7 +109,7 @@ footer {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 10px; /* Kurangi padding di layar kecil */
     line-height: 1.2; /* Sesuaikan line-height */
   }
@@ -112,7 +120,8 @@ footer {
 
   /* Tambahkan ini jika judul masih terpotong */
   header {
-    padding: 15px; /* Kurangi padding header secara keseluruhan */
+    padding: 10px 5px; /* Kurangi padding header secara keseluruhan */
     overflow: visible; /* Pastikan tidak ada overflow yang memotong teks */
   }
+  
 }
