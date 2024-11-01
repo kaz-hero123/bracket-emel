@@ -24,10 +24,11 @@ h1 {
 }
 
 .container {
-  max-width: 1200px; /* Increased for better space distribution */
-  margin: 20px auto;
-  padding: 0 20px;
+    width: 100%;           
+    overflow-x: auto;    
+    padding: 10px;
 }
+
 
 .section h2 {
   text-align: center;
@@ -99,17 +100,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+    padding: 10px; /* Kurangi padding di layar kecil */
+    line-height: 1.2; /* Sesuaikan line-height */
+  }
+
   .section h2 {
     font-size: 1.2em;
   }
-}
 
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  header p {
-    font-size: 1em;
+  /* Tambahkan ini jika judul masih terpotong */
+  header {
+    padding: 15px; /* Kurangi padding header secara keseluruhan */
+    overflow: visible; /* Pastikan tidak ada overflow yang memotong teks */
   }
 }
