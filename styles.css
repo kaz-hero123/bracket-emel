@@ -10,20 +10,12 @@ body {
   background-color: #141414;
   color: #f4f4f4;
 }
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
 
-header h1 {
-  font-size: 1.5em; /* Pastikan font-size kecil untuk layar kecil */
-  padding: 5px 10px; /* Kurangi padding untuk layar kecil */
-  white-space: nowrap; /* Agar teks tidak membungkus ke bawah */
+header {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
 h1 {
@@ -32,11 +24,10 @@ h1 {
 }
 
 .container {
-    width: 100%;           
-    overflow-x: auto;    
-    padding: 10px;
+  max-width: 1200px; /* Increased for better space distribution */
+  margin: 20px auto;
+  padding: 0 20px;
 }
-
 
 .section h2 {
   text-align: center;
@@ -79,7 +70,9 @@ h1 {
   color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.match span {
+  font-size: 15px;
+}
 .match:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 75, 43, 0.5);
@@ -108,20 +101,38 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .bracket {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .round {
+    width: 100%;
+    align-items: center;
+  }
+
+  .match {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .round.final .match {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
   header h1 {
-    font-size: 1.2em;
-    padding: 10px; /* Kurangi padding di layar kecil */
-    line-height: 1.2; /* Sesuaikan line-height */
+    font-size: 1.5em;
   }
 
   .section h2 {
     font-size: 1.2em;
   }
-
-  /* Tambahkan ini jika judul masih terpotong */
-  header {
-    padding: 10px 5px; /* Kurangi padding header secara keseluruhan */
-    overflow: visible; /* Pastikan tidak ada overflow yang memotong teks */
-  }
-  
 }
